@@ -1,0 +1,3 @@
+DEBUG = True
+SECRET_KEY = '\xa7}\xfa\x05z?\xce\xbbp\x1d\x0fR\xf0\xd9x\x82'
+ENV = 'development'
