@@ -14,6 +14,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.http.get('/api/test1').toPromise().then(res => {
       console.log(res);
-    })
+    });
   }
 }
