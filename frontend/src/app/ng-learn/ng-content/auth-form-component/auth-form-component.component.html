@@ -1,0 +1,9 @@
+<div>
+  <ng-content></ng-content><br/>
+  auth-form-component works!
+  <ng-content select="button"></ng-content>
+  <ng-content select="app-auth-rember-component"></ng-content>
+  <div *ngIf="showMessage">
+    保持登录30天
+  </div>
+</div>

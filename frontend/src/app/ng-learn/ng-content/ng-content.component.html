@@ -1,0 +1,30 @@
+<p>
+  ng-content works!
+</p>
+<app-auth-form-component>
+  <p>this is ng-content1 内容投影的内容</p>
+  <button>注册</button>
+</app-auth-form-component>
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br/>
+
+<app-auth-form-component>
+  <p>this is ng-content2 内容投影的内容</p>
+  <button>登录</button>
+</app-auth-form-component>
+
+
+
+<h3>组件投影</h3>
+<app-auth-form-component>
+  <p>this is ng-content3 内容投影的内容</p>
+  <button>记住</button>
+  <app-auth-rember-component></app-auth-rember-component>
+  <app-auth-rember-component></app-auth-rember-component>
+  <app-auth-rember-component></app-auth-rember-component>
+</app-auth-form-component>
+
+
+<h3>ContentChild 获取ng-content投射的内容</h3>
+在angular中提供了ContentChild装饰器来获取投影的元素
+

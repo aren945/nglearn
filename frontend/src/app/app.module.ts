@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
@@ -13,7 +14,7 @@ import { IndexComponent } from './index/index.component';
 import { AdminModuleModule } from './admin-module/admin-module.module';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { LeftNavComponent } from './common/component/left-nav/left-nav.component';
-
+import { NgLearnModule } from './ng-learn/ng-learn.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,9 @@ import { LeftNavComponent } from './common/component/left-nav/left-nav.component
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    AdminModuleModule
+    AdminModuleModule,
+    FormsModule,
+    NgLearnModule
   ],
   providers: [
     {

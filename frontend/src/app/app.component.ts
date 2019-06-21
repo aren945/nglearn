@@ -12,8 +12,8 @@ export class AppComponent implements OnInit {
     private http: HttpClient
   ) {}
   ngOnInit(): void {
-    this.http.get('/api/test1').toPromise().then(res => {
-      console.log(res);
-    });
+    // this.http.get('/api/test1').toPromise().then(res => {
+    //   console.log(res);
+    // });
   }
 }

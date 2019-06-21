@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestAdminComponent implements OnInit {
 
+  userName = '';
+
   constructor() { }
 
   ngOnInit() {
+    this.userName = 'aren';
   }
 
 }
