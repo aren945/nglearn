@@ -25,7 +25,7 @@ export class IndexComponent implements OnInit {
   private tupleList: [string | number, number];
   private list3: Array<number | string> = [1, 2, 3, '1231'];
   // 枚举
-  private c: Color = Color.Blue;
+  private c: Color = Color.Red;
 
   ngOnInit() {
     console.log(this.myP);
