@@ -7,12 +7,25 @@ import { AuthFormComponentComponent } from './ng-content/auth-form-component/aut
 import { AuthRemberComponentComponent } from './ng-content/auth-rember-component/auth-rember-component.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { Test1Pipe } from './pipe/test-1.pipe';
+import { NgModaleComponent } from './ng-modale/ng-modale.component';
+import {FormsModule} from '@angular/forms';
+import { TodoListComponent } from './todo-list/todo-list.component';
 
 @NgModule({
-  declarations: [NgContentComponent, AuthFormComponentComponent, AuthRemberComponentComponent, PipeComponent, Test1Pipe],
+  declarations: [
+    NgContentComponent,
+    AuthFormComponentComponent,
+    AuthRemberComponentComponent,
+    PipeComponent,
+    Test1Pipe,
+    NgModaleComponent,
+    TodoListComponent
+  ],
   imports: [
     CommonModule,
-    NgLearnRoutingModule
+    NgLearnRoutingModule,
+    FormsModule
   ]
 })
-export class NgLearnModule { }
+export class NgLearnModule {
+}

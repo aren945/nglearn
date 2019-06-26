@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
 
+import testData from '../common/test-data';
+
 enum Color {Red, Green, Blue}
 
 interface Itest {
@@ -15,7 +17,11 @@ interface Itest {
 export class IndexComponent implements OnInit {
   @ViewChild('myP') myP: TemplateRef<any>;
 
-  constructor() { }
+  testData: ({ gender: string; name: string })[];
+
+  constructor() {
+    this.testData = testData;
+  }
 
   private list: Array<number> = [1, 2, 3];
   private list1: number[] = [4, 5, 6];

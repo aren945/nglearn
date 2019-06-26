@@ -1,0 +1,20 @@
+<div class="todo-list-wrapper">
+  <div class="head">
+    <span>ToDoList</span>
+    <input type="text" placeholder="添加ToDo" [(ngModel)]="tempThing.name" (keydown.enter)="addToDoThing()">
+  </div>
+  <div class="body">
+    <div class="now">
+      <h2>正在进行</h2>
+      <div class="item" *ngFor="let item of doDoThings;" (click)="markCompleteToDoThing(item)">
+        <input type="checkbox" [(ngModel)]="item.complete"> {{item.name}}
+      </div>
+    </div>
+    <div class="complete">
+      <h2>已经完成</h2>
+      <div class="item" *ngFor="let item of completeThings" (click)="markToThing(item)">
+        <input type="checkbox" [(ngModel)]="item.complete"> {{item.name}}
+      </div>
+    </div>
+  </div>
+</div>

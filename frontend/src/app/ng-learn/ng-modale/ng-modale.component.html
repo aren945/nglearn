@@ -1,0 +1,52 @@
+<div class="wrapper">
+  <h2>人员登记系统</h2>
+  <div class="row">
+    <label>
+      <span>姓名</span>
+      <input type="text" [ngModel]="name">
+    </label>
+  </div>
+
+  {{ name }}
+  <button (click)="changeName()">点击修改姓名</button>
+
+  <div class="row">
+    <span>性别</span>
+    <label>
+      <input type="radio" value="man" name="gender" [(ngModel)]="gender"/>男
+    </label>
+    <label>
+      <input type="radio" value="woman" name="gender" [(ngModel)]="gender" />女
+    </label>
+  </div>
+  {{ gender }}
+  <div class="row">
+    <label>
+      <span>居住城市</span>
+      <select name="city" id="" [(ngModel)]="city" multiple>
+        <option value="chengdu">成都</option>
+        <option value="beijing">北京</option>
+        <option value="shanghai">上海</option>
+      </select>
+    </label>
+  </div>
+  {{ city }}
+  <div class="row">
+    <span>爱好</span>
+    <label for="" *ngFor="let hobby of hobbys">
+      <input type="checkbox" value="eat" name="hobby" [(ngModel)]="hobby.checked">{{ hobby.name }}
+    </label>
+  </div>
+
+  {{ hobbys | json }}
+
+  <div class="row">
+    <label for="">
+      <span>特殊备注</span>
+      <textarea [(ngModel)]="mark"></textarea>
+    </label>
+  </div>
+
+  {{ mark }}
+
+</div>

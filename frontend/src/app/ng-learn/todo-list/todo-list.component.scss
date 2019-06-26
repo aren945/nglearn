@@ -1,0 +1,25 @@
+.todo-list-wrapper {
+  width: 500px;
+  margin: 0 auto;
+  background: white;
+}
+.item {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+}
+.now {
+  .item {
+    background: #3B666B;
+  }
+}
+
+.complete {
+  .item {
+    background: #30799B;
+    text-decoration: line-through;
+  }
+}
