@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {StorageService} from '../common/service/storage.service';
 
 interface Thing {
   name: string;
@@ -16,7 +17,9 @@ export class TodoListComponent implements OnInit {
   doDoThings: Thing[];
   completeThings: Thing[];
   tempThing: Thing;
-  constructor() {
+  constructor(
+    private storage: StorageService
+  ) {
     this.completeThings = [{
       name: '测试1',
       complete: true
@@ -32,6 +35,9 @@ export class TodoListComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.storage);
+    this.storage.setTestData('hehhe');
+    console.log(this.storage.getTestData());
   }
 
   markCompleteToDoThing(thing: Thing): void {

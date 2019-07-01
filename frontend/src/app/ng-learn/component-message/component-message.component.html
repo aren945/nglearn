@@ -1,0 +1,6 @@
+<div>
+  <p>this is F component</p>
+  <app-childe-component
+    [componentName]="'this is Child Component Name'"
+    [fRun]="run" (testFn)="testChildEventEmit($event)"></app-childe-component>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {StorageService} from '../common/service/storage.service';
 
 interface Bobby {
   name: string;
@@ -19,7 +20,9 @@ export class NgModaleComponent implements OnInit {
   hobbys: Bobby[];
   mark: string;
 
-  constructor() {
+  constructor(
+    private storage: StorageService
+  ) {
     this.name = 'zheng';
     this.gender = 'woman1';
     this.city = ['chengdu', 'shanghai'];
@@ -36,6 +39,7 @@ export class NgModaleComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.storage.getTestData());
   }
 
   changeName() {

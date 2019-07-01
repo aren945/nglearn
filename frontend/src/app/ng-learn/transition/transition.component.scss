@@ -1,0 +1,19 @@
+#aside {
+  width: 200px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #3A7734;
+  color: white;
+  transform: translate(100%);
+  transition: all linear .3s;
+}
+
+#aside.in {
+  transform: translate(0);
+}
+
+#aside.out {
+  transform: translate(100%);
+}
